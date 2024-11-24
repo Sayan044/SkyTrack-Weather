@@ -15,10 +15,14 @@ const userLocation = document.getElementById("userLocation"),
     PValue=document.getElementById("PValue"),
     Forecast=document.querySelector(".Forecast");
 
-WEATHER_API_ENDPOINT=""
+WEATHER_API_ENDPOINT=`https://api.openweathermap.org/data/2.5/weather?appid=eca0867f6a988e34a0bd8f2bcc007eb3`
 WEATHER_DATA_ENDPOINT=""
 
 function findUserLocation(){
-    alert(1);
+    fetch(WEATHER_API_ENDPOINT + "LONDON")
+        .then((response) => response.json())
+        .then((date) => {
+            console.log(data);
+        });
 }
 
