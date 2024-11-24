@@ -21,7 +21,7 @@ WEATHER_DATA_ENDPOINT=""
 function findUserLocation(){
     fetch(WEATHER_API_ENDPOINT + "LONDON")
         .then((response) => response.json())
-        .then((date) => {
+        .then((data) => {
             console.log(data);
         });
 }
